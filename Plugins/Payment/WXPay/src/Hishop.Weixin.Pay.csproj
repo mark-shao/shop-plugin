@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{14E8FD49-518C-4A29-BCC6-87BD6FC10BEF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hishop.Weixin.Pay</RootNamespace>
+    <AssemblyName>Hishop.Weixin.Pay</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Hishop.Weixin.Pay.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LitJson">
+      <HintPath>..\lib\LitJson.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Domain\PayConfig.cs" />
+    <Compile Include="Domain\JsApiPay.cs" />
+    <Compile Include="Domain\LogType.cs" />
+    <Compile Include="Domain\PayInfo.cs" />
+    <Compile Include="Domain\DeliverInfo.cs" />
+    <Compile Include="Domain\PackageInfo.cs" />
+    <Compile Include="Domain\PayRequestInfo.cs" />
+    <Compile Include="Domain\RefundInfo.cs" />
+    <Compile Include="Domain\WxPayLog.cs" />
+    <Compile Include="DownloadBill.cs" />
+    <Compile Include="Lib\WxPayData.cs" />
+    <Compile Include="Lib\Exception.cs" />
+    <Compile Include="Lib\HttpService.cs" />
+    <Compile Include="Notify\Notify.cs" />
+    <Compile Include="Lib\WxPayApi.cs" />
+    <Compile Include="MicroPay.cs" />
+    <Compile Include="NativeNotify.cs" />
+    <Compile Include="NativePay.cs" />
+    <Compile Include="NotifyClient.cs" />
+    <Compile Include="Notify\AlarmNotify.cs" />
+    <Compile Include="Notify\FeedBackNotify.cs" />
+    <Compile Include="Notify\NotifyObject.cs" />
+    <Compile Include="Notify\PayNotify.cs" />
+    <Compile Include="QueryClient.cs" />
+    <Compile Include="PayAccount.cs" />
+    <Compile Include="PayClient.cs" />
+    <Compile Include="PayImpl\NativePayClient.cs" />
+    <Compile Include="PayImpl\JsPayClient.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Refund.cs" />
+    <Compile Include="RefundQuery.cs" />
+    <Compile Include="ResultNotify.cs" />
+    <Compile Include="Util\PayDictionary.cs" />
+    <Compile Include="Util\SignHelper.cs" />
+    <Compile Include="Util\UrlHelper.cs" />
+    <Compile Include="Util\Utils.cs" />
+    <Compile Include="Util\WebUtils.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

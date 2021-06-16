@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2368CBB8-656F-4921-A5A5-0B7A938F872B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hishop.Plugins</RootNamespace>
+    <AssemblyName>Hishop.Plugins</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConfigablePlugin.cs" />
+    <Compile Include="ConfigData.cs" />
+    <Compile Include="ConfigHandler.cs" />
+    <Compile Include="Email\EmailPlugins.cs" />
+    <Compile Include="InputType.cs" />
+    <Compile Include="Integration\IntegrateProvider.cs" />
+    <Compile Include="Integration\UserEntity.cs" />
+    <Compile Include="IPLibary\IPData.cs" />
+    <Compile Include="IPLibary\IPlibaryPlugins.cs" />
+    <Compile Include="IPLibary\IPlibaryRequest.cs" />
+    <Compile Include="IPlugin.cs" />
+    <Compile Include="Logistics\LogisticsPlugins.cs" />
+    <Compile Include="OpenId\OpenIdPlugins.cs" />
+    <Compile Include="Outpay\OutpayNotfiy.cs" />
+    <Compile Include="Outpay\OutpayPlugins.cs" />
+    <Compile Include="Outpay\OutpayRequest.cs" />
+    <Compile Include="Payment\PaymentPlugins.cs" />
+    <Compile Include="PluginContainer.cs" />
+    <Compile Include="PluginAttribute.cs" />
+    <Compile Include="PluginItem.cs" />
+    <Compile Include="PluginItemCollection.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Refund\RefundNotify.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Refund\RefundPlugins.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Refund\RefundRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Refund\ResponseResult.cs" />
+    <Compile Include="SMS\SMSPlugins.cs" />
+    <Compile Include="OpenId\OpenIdNotify.cs" />
+    <Compile Include="OpenId\OpenIdService.cs" />
+    <Compile Include="Payment\PaymentNotify.cs" />
+    <Compile Include="Payment\PaymentRequest.cs" />
+    <Compile Include="ConfigElementAttribute.cs" />
+    <Compile Include="Email\EmailSender.cs" />
+    <Compile Include="SMS\SMSSender.cs" />
+    <Compile Include="Utils.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

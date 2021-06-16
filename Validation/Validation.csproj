@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E814A5DC-C15B-4BA4-AB7C-B7C9A34AC2FD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hishop.Components.Validation</RootNamespace>
+    <AssemblyName>Hishop.Components.Validation</AssemblyName>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <CodeAnalysisRules>
+    </CodeAnalysisRules>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <DocumentationFile>
+    </DocumentationFile>
+    <CodeAnalysisRuleSet>Migrated rules for Validation.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Hishop.Components.Validation.xml</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MemberValueAccessBuilder.cs" />
+    <Compile Include="MetadataValidatedParameterElement.cs" />
+    <Compile Include="ParameterValidatorFactory.cs" />
+    <Compile Include="ReflectionMemberValueAccessBuilder.cs" />
+    <Compile Include="ResourceLoader.cs" />
+    <Compile Include="ValidationReflectionHelper.cs" />
+    <Compile Include="ValidatorAttributes\BaseValidationAttribute.cs" />
+    <Compile Include="Enums\ComparisonOperator.cs" />
+    <Compile Include="CompositeValidatorBuilder.cs" />
+    <Compile Include="ValidatorBuilderBase.cs" />
+    <Compile Include="IValidatedElement.cs" />
+    <Compile Include="IValidatedType.cs" />
+    <Compile Include="IValidatorDescriptor.cs" />
+    <Compile Include="MetadataValidatedElement.cs" />
+    <Compile Include="MetadataValidatedType.cs" />
+    <Compile Include="PropertyValidationFactory.cs" />
+    <Compile Include="TagFilter.cs" />
+    <Compile Include="ValidationSpecificationSource.cs" />
+    <Compile Include="Enums\CompositionType.cs" />
+    <Compile Include="MemberAccessValidatorBuilderFactory.cs" />
+    <Compile Include="Validators\AndCompositeValidator.cs" />
+    <Compile Include="Enums\ContainsCharacters.cs" />
+    <Compile Include="Validators\ContainsCharactersValidator.cs" />
+    <Compile Include="ValidatorAttributes\ContainsCharactersValidatorAttribute.cs" />
+    <Compile Include="Validators\FieldValueValidator.cs" />
+    <Compile Include="Validators\MemberAccessValidator.cs" />
+    <Compile Include="Validators\MethodReturnValueValidator.cs" />
+    <Compile Include="Validators\PropertyComparisonValidator.cs" />
+    <Compile Include="ValidatorAttributes\PropertyComparisonValidatorAttribute.cs" />
+    <Compile Include="Validators\PropertyValueValidator.cs" />
+    <Compile Include="ValidatorAttributes\RangeValidatorAttribute.cs" />
+    <Compile Include="Validators\RangeValidator.Generic.cs" />
+    <Compile Include="Enums\DateTimeUnit.cs" />
+    <Compile Include="Validators\DomainValidator.cs" />
+    <Compile Include="ValidatorAttributes\DomainValidatorAttribute.cs" />
+    <Compile Include="Validators\RelativeDateTimeGenerator.cs" />
+    <Compile Include="Validators\RelativeDateTimeValidator.cs" />
+    <Compile Include="ValidatorAttributes\RelativeDateTimeValidatorAttribute.cs" />
+    <Compile Include="Validators\TypeConversionValidator.cs" />
+    <Compile Include="ValidatorAttributes\TypeConversionValidatorAttribute.cs" />
+    <Compile Include="Validators\ValidatorArgumentsValidatorHelper.cs" />
+    <Compile Include="Validators\ValidatorWrapper.cs" />
+    <Compile Include="Validators\ValueAccessComparisonValidator.cs" />
+    <Compile Include="Validators\ValueValidator.cs" />
+    <Compile Include="Validators\EnumConversionValidator.cs" />
+    <Compile Include="ValidatorAttributes\EnumConversionValidatorAttribute.cs" />
+    <Compile Include="ValidatorAttributes\ValueValidatorAttribute.cs" />
+    <Compile Include="ValidatorAttributes\HasSelfValidationAttribute.cs" />
+    <Compile Include="Validators\DateTimeRangeValidator.cs" />
+    <Compile Include="Validators\ObjectCollectionValidator.cs" />
+    <Compile Include="ValidatorAttributes\ObjectCollectionValidatorAttribute.cs" />
+    <Compile Include="Validators\ObjectValidator.cs" />
+    <Compile Include="ValidatorAttributes\SelfValidationAttribute.cs" />
+    <Compile Include="Validators\SelfValidationValidator.cs" />
+    <Compile Include="ValidatorAttributes\DateTimeRangeValidatorAttribute.cs" />
+    <Compile Include="Validators\GenericValidatorWrapper.cs" />
+    <Compile Include="Enums\RangeBoundaryType.cs" />
+    <Compile Include="Validators\RangeValidator.cs" />
+    <Compile Include="Validators\RegexValidator.cs" />
+    <Compile Include="ValidatorAttributes\RegexValidatorAttribute.cs" />
+    <Compile Include="Validators\StringLengthValidator.cs" />
+    <Compile Include="ValidatorAttributes\StringLengthValidatorAttribute.cs" />
+    <Compile Include="ValidatorAttributes\ObjectValidatorAttribute.cs" />
+    <Compile Include="Validator.Generic.cs" />
+    <Compile Include="ValidatorAttributes\IgnoreNullsAttribute.cs" />
+    <Compile Include="Validators\NotNullValidator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ValueAccess\PropertyValueAccess.cs" />
+    <Compile Include="Validators\RangeChecker.cs" />
+    <Compile Include="MetadataValidatorBuilder.cs" />
+    <Compile Include="ValidationFactory.cs" />
+    <Compile Include="ValidationResult.cs" />
+    <Compile Include="ValidationResults.cs" />
+    <Compile Include="Validator.cs" />
+    <Compile Include="ValueAccess\FieldValueAccess.cs" />
+    <Compile Include="ValueAccess\MethodValueAccess.cs" />
+    <Compile Include="Validators\OrCompositeValidator.cs" />
+    <Compile Include="ValidatorAttributes\NotNullValidatorAttribute.cs" />
+    <Compile Include="ValidatorAttributes\ValidatorAttribute.cs" />
+    <Compile Include="ValidatorAttributes\ValidatorCompositionAttribute.cs" />
+    <Compile Include="Validation.cs" />
+    <Compile Include="ValueAccess\ValueAccess.cs" />
+    <Compile Include="Validators\ValueAccessValidator.cs" />
+    <Compile Include="Validators\ValueValidator.Generic.cs" />
+    <Compile Include="ValueAccessValidatorBuilder.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Migrated rules for Validation.ruleset" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

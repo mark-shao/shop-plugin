@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8DBBFFC2-BE2D-4008-A62E-B6B1A7768950}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hishop.Plugins.Payment</RootNamespace>
+    <AssemblyName>Hishop.Plugins.Payment</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AopSdk">
+      <HintPath>..\..\lib\AopSdk.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto">
+      <HintPath>..\..\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Hishop.Plugins, Version=1.0.0.29508, Culture=neutral, PublicKeyToken=a039f1e729bf8f5b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Hishop.Plugins.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\..\lib\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Jayrock.Json">
+      <HintPath>..\..\lib\Jayrock.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="LitJSON">
+      <HintPath>..\..\lib\LitJSON.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="99Bill\99BillNotify.cs" />
+    <Compile Include="99Bill\99BillRequest.cs" />
+    <Compile Include="AdvanceRequest.cs" />
+    <Compile Include="AlipayWX\AlipayFunction.cs" />
+    <Compile Include="AlipayWX\AlipayService.cs" />
+    <Compile Include="AlipayWX\AlipaySubmit.cs" />
+    <Compile Include="AlipayWX\AlipayWXNotify.cs" />
+    <Compile Include="AlipayWX\AlipayWXRequest.cs" />
+    <Compile Include="AlipayWX\config.cs" />
+    <Compile Include="AlipayWX\RSA.cs" />
+    <Compile Include="AlipayWX\WsWapPayNotify.cs" />
+    <Compile Include="Alipay_Cross_border_mobile_payment\AliPay.cs" />
+    <Compile Include="Alipay_Cross_border_mobile_payment\alipaycrossbordermobilepaymentNotify.cs" />
+    <Compile Include="Alipay_Cross_border_mobile_payment\AlipayCrossbordermobilepaymentRequest.cs" />
+    <Compile Include="Alipay_Cross_border_mobile_payment\Globals.cs" />
+    <Compile Include="Alipay_Direct\AlipayDirectNotify.cs" />
+    <Compile Include="Alipay_Direct\config.cs" />
+    <Compile Include="Alipay_Direct\DirectRequest.cs" />
+    <Compile Include="Alipay_Direct\Globals.cs" />
+    <Compile Include="Alipay_Forex_Trade\AlipayForexTradeNotify.cs" />
+    <Compile Include="Alipay_Forex_Trade\AlipayForexTradeRequest.cs" />
+    <Compile Include="Alipay_Forex_Trade\Globals.cs" />
+    <Compile Include="Allbuy\AllbuyNotify.cs" />
+    <Compile Include="Allbuy\AllbuyRequest.cs" />
+    <Compile Include="BankRequest.cs" />
+    <Compile Include="BankUnion\BankUnionNotify.cs" />
+    <Compile Include="BankUnion\BankUnionRequest.cs" />
+    <Compile Include="BankUnion\QucickPayConf.cs" />
+    <Compile Include="BankUnion\QuickPayUtils.cs" />
+    <Compile Include="BankUnion_GateWay\BankUnionGateWayConfig.cs" />
+    <Compile Include="BankUnion_GateWay\BankUnionGateWayNotify.cs" />
+    <Compile Include="BankUnion_GateWay\BankUnionGetWayRequest.cs" />
+    <Compile Include="BankUnion_GateWay\sdk\BigNum.cs" />
+    <Compile Include="BankUnion_GateWay\sdk\CertUtil.cs" />
+    <Compile Include="BankUnion_GateWay\sdk\DemoUtil.cs" />
+    <Compile Include="BankUnion_GateWay\sdk\HttpClient.cs" />
+    <Compile Include="BankUnion_GateWay\sdk\SDKConfig.cs" />
+    <Compile Include="BankUnion_GateWay\sdk\SDKUtil.cs" />
+    <Compile Include="BankUnion_GateWay\sdk\SecurityUtil.cs" />
+    <Compile Include="Chinabank\ChinabankNotify.cs" />
+    <Compile Include="Chinabank\ChinabankRequest.cs" />
+    <Compile Include="CMPay_BankAndPhone\CMPayDNotify.cs" />
+    <Compile Include="CMPay_BankAndPhone\CMPayDRequest.cs" />
+    <Compile Include="CMPay_BankAndPhone\GlobalParam.cs" />
+    <Compile Include="CMPay_BankAndPhone\HiOrderNotifyRes.cs" />
+    <Compile Include="CMPay_BankAndPhone\HmacMD5.cs" />
+    <Compile Include="CMPay_BankAndPhone\IPosMUtil.cs" />
+    <Compile Include="CMPay_BankAndPhone\NotifyHttpHandler.cs" />
+    <Compile Include="CMPay_BankAndPhone\SignUtil.cs" />
+    <Compile Include="Cncard\CncardNotify.cs" />
+    <Compile Include="Cncard\CncardRequest.cs" />
+    <Compile Include="DataHelper.cs" />
+    <Compile Include="GoPay\Globals.cs" />
+    <Compile Include="GoPay\GoPayNotify.cs" />
+    <Compile Include="GoPay\GoPayRequest.cs" />
+    <Compile Include="Ipay\IpayNotify.cs" />
+    <Compile Include="Ipay\IpayRequest.cs" />
+    <Compile Include="IPS\Globals.cs" />
+    <Compile Include="IPS\IpsNotify.cs" />
+    <Compile Include="IPS\IpsRequest.cs" />
+    <Compile Include="IPS_Express\IpsExpressNotify.cs" />
+    <Compile Include="IPS_Express\IpsExpressRequest.cs" />
+    <Compile Include="JsonHelper.cs" />
+    <Compile Include="PayLog.cs" />
+    <Compile Include="Paypal\PaypalNotify.cs" />
+    <Compile Include="Paypal\PaypalRequest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShengPayMobile\PayUserInfo.cs" />
+    <Compile Include="Common\RSAFromPkcs8.cs" />
+    <Compile Include="Common\RSAParamParser.cs" />
+    <Compile Include="ShengPayMobile\ShengPayMobileNotify.cs" />
+    <Compile Include="ShengPayMobile\ShengPayMobileRequest.cs" />
+    <Compile Include="ShengPay\ShengPayNotify.cs" />
+    <Compile Include="ShengPay\ShengPayRequest.cs" />
+    <Compile Include="Tenpay\Globals.cs" />
+    <Compile Include="Tenpay\TenpayNotify.cs" />
+    <Compile Include="Tenpay\TenpayRequest.cs" />
+    <Compile Include="WS_WapPay\AlipayFunction.cs" />
+    <Compile Include="WS_WapPay\AlipayService.cs" />
+    <Compile Include="WS_WapPay\AlipaySubmit.cs" />
+    <Compile Include="WS_WapPay\config.cs" />
+    <Compile Include="WS_WapPay\RSA.cs" />
+    <Compile Include="WS_WapPay\WsWapPayNotify.cs" />
+    <Compile Include="WS_WapPay\WsWapPayRequest.cs" />
+    <Compile Include="WX_QR_Code\WXQRCodeNotify.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WX_QR_Code\WXQRCodeRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Xpay\Globals.cs" />
+    <Compile Include="Xpay\XpayNotify.cs" />
+    <Compile Include="Xpay\XpayRequest.cs" />
+    <Compile Include="YeePay\Buy.cs" />
+    <Compile Include="YeePay\Digest.cs" />
+    <Compile Include="YeePay\HmacMD5.cs" />
+    <Compile Include="YeePay\SDK\common\StringUtils.cs" />
+    <Compile Include="YeePay\SDK\common\TimeStamp.cs" />
+    <Compile Include="YeePay\SDK\enums\FormatType.cs" />
+    <Compile Include="YeePay\SDK\enums\HttpMethodType.cs" />
+    <Compile Include="YeePay\SDK\error\YopError.cs" />
+    <Compile Include="YeePay\SDK\error\YopSubError.cs" />
+    <Compile Include="YeePay\SDK\yop.client\YopClient.cs" />
+    <Compile Include="YeePay\SDK\yop.client\YopClient3.cs" />
+    <Compile Include="YeePay\SDK\yop.client\YopConfig.cs" />
+    <Compile Include="YeePay\SDK\yop.client\YopConstants.cs" />
+    <Compile Include="YeePay\SDK\yop.client\YopRequest.cs" />
+    <Compile Include="YeePay\SDK\yop.client\YopResponse.cs" />
+    <Compile Include="YeePay\SDK\yop.encrypt\AESEncrypter.cs" />
+    <Compile Include="YeePay\SDK\yop.encrypt\BlowFish.cs" />
+    <Compile Include="YeePay\SDK\yop.encrypt\Digest.cs" />
+    <Compile Include="YeePay\SDK\yop.encrypt\YopSignUtils.cs" />
+    <Compile Include="YeePay\SDK\yop.exception\YopClientException.cs" />
+    <Compile Include="YeePay\SDK\yop.utils\AESHelper.cs" />
+    <Compile Include="YeePay\SDK\yop.utils\Assert.cs" />
+    <Compile Include="YeePay\SDK\yop.utils\Base64SecureURL.cs" />
+    <Compile Include="YeePay\SDK\yop.utils\HttpUtils.cs" />
+    <Compile Include="YeePay\SDK\yop.utils\RegexUtil.cs" />
+    <Compile Include="YeePay\SDK\yop.utils\RsaAndAes.cs" />
+    <Compile Include="YeePay\SDK\yop.utils\RSACryptoService.cs" />
+    <Compile Include="YeePay\SDK\yop.utils\RSACryptoServiceProviderExtension.cs" />
+    <Compile Include="YeePay\SDK\yop.utils\RSAFromPkcs8.cs" />
+    <Compile Include="YeePay\SDK\yop.utils\SHA1withRSA.cs" />
+    <Compile Include="YeePay\SDK\yop.utils\SoftLog.cs" />
+    <Compile Include="YeePay\SDK\yop.utils\UploadFile.cs" />
+    <Compile Include="YeePay\SDK\yop.utils\UUIDGenerator.cs" />
+    <Compile Include="YeePay\YeepayNotify.cs" />
+    <Compile Include="YeePay\YeepayRequest.cs" />
+    <Compile Include="PODRequest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
